@@ -5,7 +5,7 @@
     <title>Add a game</title>
 </head>
 <body>
-    <form method="post" action="">
+    <form method="post" enctype="multipart/form-data">
         <lable for="name">name</lable>
         <br>
         <input type="text" name="name"><br>
@@ -13,9 +13,9 @@
         <lable for="des">description</lable>
         <br>
         <input type="text" name="des"><br>
-        <lable for="img">img url</lable>
+        <lable for="img">img</lable>
         <br>
-        <input type="text" name="img"><br>
+        <input type="file" name="img" accept="image" />
         <lable for="name">link</lable>
         <br>
         <input type="text" name="link"><br>
