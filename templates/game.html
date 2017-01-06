@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<title>hobby</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<body>
+
+<div class="w3-display-container" style="margin-bottom:50px">
+  <img src="/static/image/top.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-container w3-amber w3-hover-orange w3-hide-small"
+   style="bottom:10%;opacity:0.7;width:70%">
+  <h2><b>4 Most played game 2016</b></h2>
+</div>
+</div>
+
+
+    {% for game in game_list %}
+<div class="w3-half w3-container">
+  <div class="w3-topbar w3-border-amber w3-padding-top">
+    <img  src={{ game["img"] }} style="width:100%">
+    <h2>{{ game["name"] }}</h2>
+    <p>{{ game["des"] }}.</p>
+    <a href="{{ game["link"] }}">{{ game["name"] }} home page</a>
+    <div class="w3-right-align">
+        <a href="/deletegame/{{ game.id }}"><img src="http://downloadicons.net/sites/default/files/delete-icon-37693.png" ></a>
+        <a href="/updategame/{{ game.id }}"><img src="http://icons.veryicon.com/png/System/Farm%20Fresh/update.png"></a>
+    </div>
+    </div>
+
+</div>
+    {% endfor %}
+
+
+
+
+</body>
+</html>
